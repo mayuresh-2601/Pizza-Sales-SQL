@@ -75,6 +75,8 @@ CREATE TABLE order_details (
     FOREIGN KEY(pizza_id) REFERENCES pizzas(pizza_id)
 );
 ```
+## ER Diagram
+![ER Diagram](https://github.com/mayuresh-2601/Pizza-Sales-SQL/blob/main/Pizza.png)
 
 ## 🔍 Business Questions & SQL Solutions
 
