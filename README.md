@@ -162,6 +162,19 @@ Monthly cumulative revenue shows strong growth over time.
 
 This demonstrates how SQL can transform raw sales data into valuable business intelligence.
 
+
+## 🚀 How to Run This Project
+
+Clone this repository
+
+Import the CSV files into MySQL
+
+Run the database schema file
+
+Run the analysis SQL file
+
+Explore insights from queries & views
+
 ## 👨‍💻 Author – Mayuresh Kasar
 
 This project is part of my SQL Developer & Data Analytics portfolio.
