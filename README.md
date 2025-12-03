@@ -123,7 +123,7 @@ GROUP BY HOUR(order_time)
 ORDER BY order_count DESC;
 ```
 
-✅ Category-wise Revenue
+### ✅ Category-wise Revenue
 
 ```sql
 SELECT pt.category, SUM(od.quantity * p.price) AS revenue
