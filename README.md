@@ -146,3 +146,17 @@ GROUP BY month
 ORDER BY month;
 ```
 
+## 📊 Key Findings & Insights
+
+The highest revenue comes from large-sized pizzas and strong-performing categories.
+Weekends generate more revenue than weekdays.
+Several pizzas never sold, indicating low popularity.
+Lunch and evening hours show peak ordering patterns.
+Certain pizzas consistently dominate overall sales.
+Monthly cumulative revenue shows strong growth over time.
+This demonstrates how SQL can transform raw sales data into valuable business intelligence.
+
+## 👨‍💻 Author – Mayuresh Kasar
+
+This project is part of my SQL Developer & Data Analytics portfolio.
+Feel free to explore, fork the repo, and connect with me for collaboration or feedback!
