@@ -156,6 +156,7 @@ ORDER BY month;
 ✔ Monthly cumulative revenue shows strong growth over time
 ✔ This demonstrates how SQL can transform raw sales data into valuable business intelligence
 
+---
 
 ## 🚀 How to Run This Project
 
@@ -165,7 +166,11 @@ ORDER BY month;
 - Run the analysis SQL file
 - Explore insights from queries & views
 
+---
+
 ## 👨‍💻 Author – Mayuresh Kasar
 
 This project is part of my SQL Developer & Data Analytics portfolio.
 Feel free to explore, fork the repo, and connect with me for collaboration or feedback!
+
+---
