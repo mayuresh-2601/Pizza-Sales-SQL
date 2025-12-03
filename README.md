@@ -74,3 +74,59 @@ CREATE TABLE order_details (
     FOREIGN KEY(order_id) REFERENCES orders(order_id),
     FOREIGN KEY(pizza_id) REFERENCES pizzas(pizza_id)
 );
+
+## 🔍 Business Questions & SQL Solutions
+
+### ✅ Total Number of Orders
+```sql
+SELECT COUNT(order_id) AS total_orders
+FROM orders;
+
+### ✅ Top 5 Most Ordered Pizzas
+```sql
+SELECT pt.name, SUM(od.quantity) AS total_quantity
+FROM pizza_types pt
+JOIN pizzas p ON pt.pizza_type_id = p.pizza_type_id
+JOIN order_details od ON od.pizza_id = p.pizza_id
+GROUP BY pt.name
+ORDER BY total_quantity DESC
+LIMIT 5;
+
+### ✅ Total Revenue Generated
+```sql
+SELECT ROUND(SUM(od.quantity * p.price), 2) AS total_revenue
+FROM order_details od
+JOIN pizzas p ON od.pizza_id = p.pizza_id;
+
+### ✅ Identify Pizzas Never Sold
+```sql
+SELECT p.pizza_id
+FROM pizzas p
+LEFT JOIN order_details od ON p.pizza_id = od.pizza_id
+WHERE od.pizza_id IS NULL;
+
+### ✅ Peak Ordering Hour
+```sql
+SELECT HOUR(order_time) AS hour, COUNT(*) AS order_count
+FROM orders
+GROUP BY HOUR(order_time)
+ORDER BY order_count DESC;
+
+### ✅ Category-wise Revenue
+```sql
+SELECT pt.category, SUM(od.quantity * p.price) AS revenue
+FROM pizza_types pt
+JOIN pizzas p ON pt.pizza_type_id = p.pizza_type_id
+JOIN order_details od ON od.pizza_id = p.pizza_id
+GROUP BY pt.category
+ORDER BY revenue DESC;
+
+### ✅ Monthly Revenue Trend
+```sql
+SELECT DATE_FORMAT(order_date, '%Y-%m') AS month,
+       SUM(od.quantity * p.price) AS revenue
+FROM orders o
+JOIN order_details od ON o.order_id = od.order_id
+JOIN pizzas p ON p.pizza_id = od.pizza_id
+GROUP BY month
+ORDER BY month;
