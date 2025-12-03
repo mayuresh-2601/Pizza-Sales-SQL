@@ -76,8 +76,7 @@ CREATE TABLE order_details (
 );
 ```
 ## ER Diagram
-![ER Diagram](https://github.com/mayuresh-2601/Pizza-Sales-SQL/blob/main/Pizza.png)
-
+![ER Diagram](https://github.com/mayuresh-2601/Pizza-Sales-SQL/blob/main/ER%20Diagram.png)
 ## 🔍 Business Questions & SQL Solutions
 
 ### ✅ Total Number of Orders
