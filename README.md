@@ -76,4 +76,9 @@ CREATE TABLE order_details (
 );
 
 ## 🔍 Business Questions & SQL Solutions
-   ✅ Total Number of Orders
+
+### ✅ Total Number of Orders
+```sql
+SELECT COUNT(order_id) AS total_orders
+FROM orders;
+
